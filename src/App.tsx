@@ -95,7 +95,7 @@ export default function App() {
               {[
                 "I want a recipe for cookies.",
                 "Give me recipes for something healthy.",
-                "I have tuna, honey, and avocado.",
+                "I have tomatoes, garlic and basil",
                 "Low carb lunch recipes for 4 people.",
               ].map((suggestion) => (
                 <button
