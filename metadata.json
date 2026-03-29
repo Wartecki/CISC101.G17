@@ -1,0 +1,5 @@
+{
+  "name": "MealWise Generator",
+  "description": "A conversational meal idea generator that adapts to your planning stage and dietary needs.",
+  "requestFramePermissions": []
+}
