@@ -59,11 +59,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFCFB] text-[#1A1A1A] font-sans selection:bg-[#FF6321] selection:text-white">
+    <div className="min-h-screen bg-[#FDFCFB] text-[#1A1A1A] font-sans selection:bg-[#2563EB] selection:text-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#1A1A1A]/10 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-[#FF6321] rounded-full flex items-center justify-center text-white">
+          <div className="w-10 h-10 bg-[#2563EB] rounded-full flex items-center justify-center text-white">
             <ChefHat size={24} />
           </div>
           <h1 className="text-xl font-semibold tracking-tight">MealWise</h1>
@@ -101,9 +101,9 @@ export default function App() {
                 <button
                   key={suggestion}
                   onClick={() => setInput(suggestion)}
-                  className="p-4 text-left border border-[#1A1A1A]/10 rounded-2xl hover:border-[#FF6321] hover:bg-[#FF6321]/5 transition-all group"
+                  className="p-4 text-left border border-[#1A1A1A]/10 rounded-2xl hover:border-[#2563EB] hover:bg-[#2563EB]/5 transition-all group"
                 >
-                  <p className="text-sm font-medium text-[#1A1A1A]/40 group-hover:text-[#FF6321] mb-1 uppercase tracking-wider">
+                  <p className="text-sm font-medium text-[#1A1A1A]/40 group-hover:text-[#2563EB] mb-1 uppercase tracking-wider">
                     Try asking
                   </p>
                   <p className="font-medium">{suggestion}</p>
@@ -123,7 +123,7 @@ export default function App() {
                 >
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-                      message.role === "user" ? "bg-[#1A1A1A] text-white" : "bg-[#FF6321] text-white"
+                      message.role === "user" ? "bg-[#1E40AF] text-white" : "bg-[#2563EB] text-white"
                     }`}
                   >
                     {message.role === "user" ? <User size={16} /> : <ChefHat size={16} />}
@@ -131,7 +131,7 @@ export default function App() {
                   <div
                     className={`max-w-[85%] rounded-3xl px-6 py-4 ${
                       message.role === "user"
-                        ? "bg-[#1A1A1A] text-white rounded-tr-none"
+                        ? "bg-[#DBEAFE] text-[#1E40AF] rounded-tr-none user-bubble"
                         : "bg-white border border-[#1A1A1A]/10 rounded-tl-none shadow-sm"
                     }`}
                   >
@@ -148,14 +148,14 @@ export default function App() {
                 animate={{ opacity: 1 }}
                 className="flex gap-4"
               >
-                <div className="w-8 h-8 rounded-full bg-[#FF6321] text-white flex items-center justify-center animate-pulse">
+                <div className="w-8 h-8 rounded-full bg-[#2563EB] text-white flex items-center justify-center animate-pulse">
                   <ChefHat size={16} />
                 </div>
                 <div className="bg-white border border-[#1A1A1A]/10 rounded-3xl rounded-tl-none px-6 py-4 shadow-sm">
                   <div className="flex gap-1">
-                    <span className="w-1.5 h-1.5 bg-[#FF6321] rounded-full animate-bounce" />
-                    <span className="w-1.5 h-1.5 bg-[#FF6321] rounded-full animate-bounce [animation-delay:0.2s]" />
-                    <span className="w-1.5 h-1.5 bg-[#FF6321] rounded-full animate-bounce [animation-delay:0.4s]" />
+                    <span className="w-1.5 h-1.5 bg-[#2563EB] rounded-full animate-bounce" />
+                    <span className="w-1.5 h-1.5 bg-[#2563EB] rounded-full animate-bounce [animation-delay:0.2s]" />
+                    <span className="w-1.5 h-1.5 bg-[#2563EB] rounded-full animate-bounce [animation-delay:0.4s]" />
                   </div>
                 </div>
               </motion.div>
@@ -170,7 +170,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto">
           <form
             onSubmit={handleSubmit}
-            className="relative flex items-center bg-white border border-[#1A1A1A]/10 rounded-full shadow-lg focus-within:border-[#FF6321] transition-all px-2 py-2"
+            className="relative flex items-center bg-[#EFF6FF] border border-[#2563EB]/20 rounded-full shadow-lg focus-within:border-[#2563EB] transition-all px-2 py-2"
           >
             <input
               type="text"
@@ -183,7 +183,7 @@ export default function App() {
             <button
               type="submit"
               disabled={!input.trim() || isLoading}
-              className="w-12 h-12 bg-[#FF6321] text-white rounded-full flex items-center justify-center hover:bg-[#E5591D] disabled:opacity-50 disabled:hover:bg-[#FF6321] transition-all"
+              className="w-12 h-12 bg-[#2563EB] text-white rounded-full flex items-center justify-center hover:bg-[#1D4ED8] disabled:opacity-50 disabled:hover:bg-[#2563EB] transition-all"
             >
               <Send size={20} />
             </button>

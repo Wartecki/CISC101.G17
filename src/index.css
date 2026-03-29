@@ -17,6 +17,10 @@
   @apply text-[#1A1A1A] leading-relaxed;
 }
 
+.user-bubble .prose, .user-bubble .prose strong {
+  @apply text-[#1E40AF];
+}
+
 .prose p {
   @apply mb-4 last:mb-0;
 }
@@ -46,5 +50,5 @@
 }
 
 .prose h1, .prose h2, .prose h3 {
-  @apply font-serif italic text-xl mb-4 text-[#FF6321];
+  @apply font-serif italic text-xl mb-4 text-[#2563EB];
 }
