@@ -66,7 +66,7 @@ export default function App() {
           <div className="w-10 h-10 bg-[#2563EB] rounded-full flex items-center justify-center text-white">
             <ChefHat size={24} />
           </div>
-          <h1 className="text-xl font-semibold tracking-tight">MealWise</h1>
+          <h1 className="text-xl font-semibold tracking-tight">FlavourFinder</h1>
         </div>
         <button
           onClick={handleReset}
@@ -94,7 +94,7 @@ export default function App() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
               {[
                 "I want a recipe for cookies.",
-                "Give me recipes for something healthy.",
+                "Five minute snack recipes",
                 "I have tomatoes, garlic and basil",
                 "Low carb lunch recipes for 4 people.",
               ].map((suggestion) => (
@@ -189,7 +189,7 @@ export default function App() {
             </button>
           </form>
           <p className="text-center text-[10px] text-[#1A1A1A]/40 mt-4 uppercase tracking-[0.2em]">
-            Powered by Gemini AI • MealWise Generator
+            Powered by Gemini AI • FlavourFinder
           </p>
         </div>
       </div>
